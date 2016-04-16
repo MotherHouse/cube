@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Environmental Monitoring</title>
+    <!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Esquel</a>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+
+
+
+                <div class="btn-group">
+                    <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">中文<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">中文</a></li>
+
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button data-toggle="dropdown" class="btn btn-info dropdown-toggle">高明<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">高明</a></li>
+                        <li><a href="#">新疆</a></li>
+                        <li><a href="#">桂林</a></li>
+
+                    </ul>
+                </div>
+                <!-- /.dropdown -->
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a href="index.html" class="active-menu"><i class="fa fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="Air.html" ><i class="fa fa-desktop"></i>热电厂</a>
+                    </li>
+                    <li>
+                        <a href="Water.html"><i class="fa fa-bar-chart-o"></i>水质净化中心</a>
+                    </li>
+                    <li>
+                        <a href="Sound.html"><i class="fa fa-qrcode"></i>厂界噪声</a>
+                    </li>
+
+                    <li>
+                        <a href="Temperature.html"><i class="fa fa-table"></i>温度</a>
+                    </li>
+
+                    <li>
+                        <a href="Humidity.html"><i class="fa fa-edit"></i>湿度</a>
+                    </li>
+
+                    <li>
+                        <a href="Video.html"><i class="fa fa-camera"></i>在线视频</a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i>监测报告<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="AirReport.html">热电厂</a>
+                            </li>
+                            <li>
+                                <a href="WaterReport.html" class="active-menu">水质净化中心</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            Dashboard <small></small>
+                        </h1>
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-green">
+                            <div class="panel-body">
+                                <i class="fa fa-bar-chart-o fa-5x"></i>
+                                <h3>35</h3>
+                            </div>
+                            <div class="panel-footer back-footer-green">
+                                化学需氧量COD (mg/L)
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                                <i class="fa fa-shopping-cart fa-5x"></i>
+                                <h3>4.6 </h3>
+                            </div>
+                            <div class="panel-footer back-footer-blue">
+                                氨氮 (mg/L)
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row">
+
+
+
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                化学需氧量COD日趋式图 （WS-01022)  单位：mg/L
+                            </div>
+                            <div class="panel-body">
+                                <div id="COD_chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                氨氮日趋式图（WS-01022)  单位：mg/L
+                            </div>
+                            <div class="panel-body">
+                                <div id="NH_chart"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                烟尘日趋式图 （热电厂 FQ-01001 #1炉)  单位：mg/m3
+                            </div>
+                            <div class="panel-body">
+                                <div id="Dust_1_chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                二氧化硫日趋式图 （热电厂 FQ-01001 #1炉)  单位：mg/m3
+                            </div>
+                            <div class="panel-body">
+                                <div id="SQ2_1_chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                氮氧化物日趋式图 （热电厂 FQ-01001 #1炉)  单位：mg/m3
+                            </div>
+                            <div class="panel-body">
+                                <div id="NO_1_chart"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                烟尘日趋式图 （热电厂 FQ-01001 #2炉)  单位：mg/m3
+                            </div>
+                            <div class="panel-body">
+                                <div id="Dust_2_chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                二氧化硫日趋式图 （热电厂 FQ-01001 #2炉)  单位：mg/m3
+                            </div>
+                            <div class="panel-body">
+                                <div id="SQ2_2_chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                氮氧化物日趋式图 （热电厂 FQ-01001 #2炉)  单位：mg/m3
+                            </div>
+                            <div class="panel-body">
+                                <div id="NO_2_chart"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                烟尘日趋式图 （热电厂 FQ-01001 #3炉)  单位：mg/m3
+                            </div>
+                            <div class="panel-body">
+                                <div id="Dust_3_chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                二氧化硫日趋式图 （热电厂 FQ-01001 #3炉)  单位：mg/m3
+                            </div>
+                            <div class="panel-body">
+                                <div id="SQ2_3_chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                氮氧化物日趋式图 （热电厂 FQ-01001 #3炉)  单位：mg/m3
+                            </div>
+                            <div class="panel-body">
+                                <div id="NO_3_chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div id="realtimeAir"></div>
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+                <footer>
+                    <div id="footer">
+                        <div class="copyright">
+                            <a href="http://www.esquel.com">Copyright © 2016 Esquel Group. All Rights Reserved. Designed by GEK/PE.</a>
+                        </div>
+                    </div>
+
+                </footer>
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/js/morris/morris.js"></script>
+    <!-- Custom Js -->
+    <script src="assets/js/Dashboard.js"></script>
+
+
+    <script type="text/javascript">
+
+            var data_info;
+            $.ajax({
+                type: 'get',
+                url: 'http://getazlnx001.chinacloudapp.cn:8080/emstracking?method=monitoring_item',
+                dataType: 'jsonp',
+                success: function (data) {
+                    data_info = data;
+
+                    var html = '<div class="panel panel-default"><div class="panel-heading">所有因子</div><div class="panel-body"><div class="table-responsive"><table class="table table-striped table-bordered table-hover"><thead><tr><th>#</th><th>位置</th><th>监测因子</th><th>单位</th><th>当前值</th><th>限值</th></tr></thead><tbody>';
+
+                    var j;
+                for (var i = 0; i < data_info.length; i++) {
+                    j = i + 1;
+                    html += '<tr>';
+                    html += '<td>' + j + '</td>';
+                    html += '<td>' + data_info[i].locationname + '</td>';
+                    html += '<td>' + data_info[i].item_name + '</td>';
+                    html += '<td>' + data_info[i].item_unit + '</td>';
+                    html += '<td>' + data_info[i].last_value + '</td>';
+                    html += '<td>' + data_info[i].threshold_value + '</td>';
+
+                    html +='</tr>';
+                }
+                html += '</tbody></table></div></div></div>';
+
+
+                document.getElementById('realtimeAir').innerHTML = html;
+
+
+
+                }
+            });
+
+    </script>
+
+
+
+
+
+</body>
+</html>
