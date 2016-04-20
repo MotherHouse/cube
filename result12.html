@@ -100,7 +100,6 @@
                         <a href="result12.html" ><i class="fa fa-bar-chart-o"></i>比赛成绩(斜转 决赛)</a>
                     </li>
 
-
                 </ul>
 
             </div>
@@ -114,11 +113,13 @@
 
                 <div class="row">
 
-                        <img src="image/cat.jpg" width="100%">
+
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div id="result"></div>
+                    </div>
 
 
                 </div>
-
                 <!-- /. ROW  -->
                 <footer>
                     <div id="footer">
@@ -153,12 +154,12 @@
             var data_info;
             $.ajax({
                 type: 'get',
-                url: 'http://119.29.178.222:8080/player?method=all',
+                url: 'http://119.29.178.222:8080/player?method=result&event_id=1&item_list_id=12',
                 dataType: 'jsonp',
                 success: function (data) {
                     data_info = data;
 
-                    var html = '<div class="panel panel-default"><div class="panel-heading">参赛选手</div><div class="panel-body"><div class="table-responsive"><table class="table table-striped table-bordered table-hover"><thead><tr><th>#</th><th>姓名</th></tr></thead><tbody>';
+                    var html = '<div class="panel panel-default"><div class="panel-heading">成绩</div><div class="panel-body"><div class="table-responsive"><table class="table table-striped table-bordered table-hover"><thead><tr><th>#</th><th>姓名</th><th>项目</th><th>轮次</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>best</th><th>avg</th><th>排名</th></tr></thead><tbody>';
 
                     var j;
                 for (var i = 0; i < data_info.length; i++) {
@@ -166,13 +167,22 @@
                     html += '<tr>';
                     html += '<td>' + j + '</td>';
                     html += '<td>' + data_info[i].player_name + '</td>';
-
+                    html += '<td>' + data_info[i].item_name + '</td>';
+                    html += '<td>' + data_info[i].item_step + '</td>';
+                    html += '<td>' + data_info[i].result1 + '</td>';
+                    html += '<td>' + data_info[i].result2 + '</td>';
+                    html += '<td>' + data_info[i].result3 + '</td>';
+                    html += '<td>' + data_info[i].result4 + '</td>';
+                    html += '<td>' + data_info[i].result5 + '</td>';
+                    html += '<td>' + data_info[i].best + '</td>';
+                    html += '<td>' + data_info[i].avg + '</td>';
+                    html += '<td>' + data_info[i].ranking + '</td>';
                     html +='</tr>';
                 }
                 html += '</tbody></table></div></div></div>';
 
 
-                document.getElementById('player_list').innerHTML = html;
+                document.getElementById('result').innerHTML = html;
 
 
 
