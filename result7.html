@@ -70,34 +70,41 @@
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a href="index.html" ><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="player.html"><i class="fa fa-desktop"></i>参赛选手</a>
-                    </li>
-                    <li>
-                        <a href="result.html" ><i class="fa fa-bar-chart-o"></i>比赛成绩(333 初赛)</a>
+                        <a href="player.html" ><i class="fa fa-desktop"></i>参赛选手</a>
                     </li>
 
-                    <li>
-                        <a href="result7.html" ><i class="fa fa-bar-chart-o"></i>比赛成绩(333 复赛)</a>
-                    </li>
 
                     <li>
-                        <a href="result8.html" ><i class="fa fa-bar-chart-o"></i>比赛成绩(333 决赛)</a>
-                    </li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i> 比赛成绩<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="result.html"  >333 初赛</a>
+                            </li>
+                            <li>
+                                <a href="result7.html" >333 复赛</a>
+                            </li>
 
-                    <li>
-                        <a href="result9.html" ><i class="fa fa-bar-chart-o"></i>比赛成绩(444 决赛)</a>
-                    </li>
-                    <li>
-                        <a href="result10.html" ><i class="fa fa-bar-chart-o"></i>比赛成绩(333oh 决赛)</a>
-                    </li>
-                    <li>
-                        <a href="result11.html" ><i class="fa fa-bar-chart-o"></i>比赛成绩(金字塔 决赛)</a>
-                    </li>
-                    <li>
-                        <a href="result12.html" ><i class="fa fa-bar-chart-o"></i>比赛成绩(斜转 决赛)</a>
+                            <li>
+                                <a href="result8.html" class="active-menu">二阶</a>
+                            </li>
+                            <li>
+                                <a href="result9.html">444 决赛</a>
+                            </li>
+
+                            <li>
+                                <a href="result10.html">三阶单手</a>
+                            </li>
+                            <li>
+                                <a href="result11.html">金字塔</a>
+                            </li>
+                            <li>
+                                <a href="result12.html">斜转</a>
+                            </li>
+
+                        </ul>
                     </li>
 
                 </ul>
@@ -164,7 +171,7 @@
                     var j;
                 for (var i = 0; i < data_info.length; i++) {
                     j = i + 1;
-                    html += '<tr>';
+                    html += '<tr class="odd gradeA">';
                     html += '<td>' + j + '</td>';
                     html += '<td>' + data_info[i].player_name + '</td>';
                     html += '<td>' + data_info[i].item_name + '</td>';
