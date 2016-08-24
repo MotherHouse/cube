@@ -28,7 +28,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            参赛选手资料
+                            增加选手资料
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -37,7 +37,7 @@
                                 <div class="col-lg-6">
                                     <h4>增加选手</h4>
                                       <form role="form" name="input" action="http://119.29.178.222:8080/updatedb?" method="get">
-                                        <label>method</label>
+                                        <label hidden＝"hidden">method</label>
                                         <input type="text" name="method" />
                                         <label>赛事ID</label>
                                         <input type="text" name="event_id" />
@@ -56,7 +56,21 @@
                                       <label>选手姓名</label>
                                       <input type="text" name="player_name" />
 
-                                    <input type="submit" value="修改" />
+
+                                      <input type="submit" value="修改" />
+                                        </form>
+                                      <h4>增加比赛</h4>
+                                    <form role="form" name="input" action="http://119.29.178.222:8080/updatedb?" method="get">
+                                      <label hidden="hidden">method</label>
+                                      <input type="text" name="method"  value="insertevents" hidden="hidden"/>
+                                      <label>赛事名称</label>
+                                      <input type="text" name="event_name" />
+                                      <label>城市</label>
+                                      <input type="text" name="city" />
+                                      <label>比赛日期</label>
+                                      <input type="text" name="event_date" />
+
+                                    <input type="submit" value="增加" />
 
                                   </form>
                           </div>
