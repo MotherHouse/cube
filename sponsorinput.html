@@ -378,8 +378,8 @@
                       var urlstr='http://119.29.178.222:8080/updatedb?method=insertsponsor&event_id='+
                                   document.getElementById('event_id').value+'&item_name='+
                                   document.getElementById('item_name').value+'&amount='+
-                                  document.getElementById('amount').value+'brand='+
-                                  document.getElementById('brand').value+'&origin'+
+                                  document.getElementById('amount').value+'&brand='+
+                                  document.getElementById('brand').value+'&origin='+
                                   document.getElementById('origin').value;
                        alert(urlstr);
                        $.get(urlstr,function(data,status){

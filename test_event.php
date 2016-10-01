@@ -27,14 +27,14 @@ $conn->query("set character set 'utf8'");//读库
 $conn->query("set names 'utf8'");//写库
 
 
-$sql = "SELECT * FROM events";
+$sql = "SELECT * FROM result where item_list_id=1 ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-     echo "<table><tr><th>赛事名称</th><th>城市</th></tr>";
+     echo "<table><tr><th项目</th><th>姓名</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>avg</th><th>pb</th></tr>";
      // output data of each row
      while($row = $result->fetch_assoc()) {
-         echo "<tr><td>" . $row["event_id"]. "</td><td>" . $row["event_name"]. " " . $row["city"]. "</td></tr>";
+         echo "<tr><td>" . $row["item_list_id"]. "</td><td>" . $row["player_name"]. "</td><td> " . $row["result1"]. "</td><td> " . $row["result2"]. "</td><td> " . $row["result3"]. "</td><td> " . $row["result4"]. "</td></tr>";
      }
      echo "</table>";
 } else {
