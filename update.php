@@ -190,6 +190,18 @@ if ($result->num_rows > 0) {
                  $avg=round($avg,2);
 
 
+                 $id = $row["idresult"];
+
+                 $sql_update = "UPDATE result
+                                SET  best= '$pb',worst= '$worst',avg= '$avg'
+
+                                WHERE idresult = '$id'";
+                 echo "$sql_update"."<br>";
+
+                $resutl1 =  $conn->query($sql_update);
+                echo "Result is "."$result1->num_rows"."<br>";
+
+
 
 
           echo "<td>$avg</td><td>".$worst."</td><td>".$pb."</td><td>".$dnf_times."</td><td>".$sum."</td><td>".$sum1."</td>";
