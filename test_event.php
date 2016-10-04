@@ -38,7 +38,7 @@ $sum=0;
 
 
 
-if ($result->num_rows > 0) {
+if ($result->num_rows> 0) {
      echo "<table><tr><th>项目</th><th>姓名</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>avg</th><th>worst</th><th>pb</th><th>dnf_times</th><th>sum</th><th>sum1</th></tr>";
      // output data of each row
      while($row = $result->fetch_assoc()) {
