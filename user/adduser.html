@@ -4,12 +4,15 @@
 </head>
 <body>
 <form action="adduser.php" method="post">
-  <div>event_id:
-  <input type = "text" name="event_id">
-</div>
-<div>player_name:
-  <input type = "text" name="player_name">
-</div>
+  <div class="form-group">
+      <label>比赛名称</label>
+      <input class="form-control" name="event_id">
+  </div>
+  <div class="form-group">
+      <label>名字</label>
+      <input class="form-control" name="player_name">
+  </div>
+
   <input type = "submit" value="提交">
 </form>
 

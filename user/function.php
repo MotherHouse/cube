@@ -8,6 +8,8 @@ require_once 'config.php';
   //  if(!$conn){
   //   //  die("")
   //  }
+  $conn->query("set character set 'utf8'");//读库
+  $conn->query("set names 'utf8'");//写库
 
    return $conn;
 
