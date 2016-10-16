@@ -87,7 +87,7 @@ require_once 'function.php'
           </div>
 
 
-          <input type = "submit" value="提交">
+         <button type="submit" class="btn btn-primary">添加</button>
       </form>
     </div>
     <!-- /.col-lg-6 (nested) -->
