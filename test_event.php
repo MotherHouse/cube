@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+
 
 </head>
 <body>
@@ -41,7 +41,9 @@ $sum=0;
 
 
 if ($result->num_rows> 0) {
-     echo "<table class="table table-hover><tr><th>项目</th><th>姓名</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>avg</th><th>worst</th><th>pb</th><th>dnf_times</th><th>sum</th><th>sum1</th></tr>";
+     echo "<div class="panel-body">";
+     echo "<div class="table-responsive">";
+     echo "<table class="table table-hover"><tr><th>项目</th><th>姓名</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>avg</th><th>worst</th><th>pb</th><th>dnf_times</th><th>sum</th><th>sum1</th></tr>";
      // output data of each row
      while($row = $result->fetch_assoc()) {
 
@@ -201,6 +203,9 @@ if ($result->num_rows> 0) {
           echo "</tr>";
      }
      echo "</table>";
+     echo "</div>";
+     echo "</div>";
+
 } else {
      echo "0 results";
 }

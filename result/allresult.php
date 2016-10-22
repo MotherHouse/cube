@@ -14,8 +14,7 @@ require_once 'function.php'
 </head>
 <body>
   <a href="addresulta.php">插入成绩</a>
-    <a href="updateresulta.php">修改成绩</a>
-
+  
 
 
   <div class="row">
