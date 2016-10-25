@@ -13,8 +13,8 @@ require_once 'function.php'
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <a href="addresulta.php">插入成绩</a>
-  
+  <a href="addresult.php">插入成绩</a>
+
 
 
   <div class="row">

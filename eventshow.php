@@ -13,7 +13,7 @@
 <body>
   <div class="panel-body">";
  <div class="table-responsive">";
-  <table class="table table-hover"><tr><th>项目</th><th>姓名</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>avg</th><th>worst</th><th>pb</th><th>dnf_times</th><th>sum</th><th>sum1</th></tr>";
+  <table class="table table-hover"><tr><th>项目</th><th>姓名</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>avg</th><th>pb</th></tr>";
 
 <?php
 $servername = "119.29.178.222";
@@ -44,7 +44,7 @@ $sum=0;
 
 
 if ($result->num_rows> 0) {
-    
+
      while($row = $result->fetch_assoc()) {
 
          echo "<tr><td>" . $row["item_list_id"]. "</td><td>" . $row["player_name"]. "</td><td> " . $row["result1"]. "</td><td> " . $row["result2"]. "</td><td> " . $row["result3"]. "</td><td> " . $row["result4"]. "</td><td> ". $row["result5"]. "</td>";
@@ -197,7 +197,7 @@ if ($result->num_rows> 0) {
 
 
 
-          echo "<td>$avg</td><td>".$worst."</td><td>".$pb."</td><td>".$dnf_times."</td><td>".$sum."</td><td>".$sum1."</td>";
+          echo "<td>$avg</td><td>".$pb."</td>";
 
 
           echo "</tr>";
