@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>select加链接</title>
+</head>
+<body>
+<SCRIPT language=javascript>
+<!--
+// open the related site windows
+function mbar(sobj) {
+var docurl =sobj.options[sobj.selectedIndex].value;
+if (docurl != "") {
+open(docurl,'_blank');
+sobj.selectedIndex=0;
+sobj.blur();
+}
+}
+//-->
+</SCRIPT>
+<Select onchange=mbar(this) name="select">
+<OPTION selected>=== 合作伙伴 ===</OPTION>
+<OPTION value="http://www.baidu.com">百度</OPTION>
+<OPTION value="http://www.163.com">网易</OPTION>
+<OPTION value="http://www.flash8.net/">闪吧</OPTION>
+</Select>
+</body>
+</html> 

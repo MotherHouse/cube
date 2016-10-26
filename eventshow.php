@@ -7,28 +7,14 @@
   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-          //select跳页
-          function s_click(obj) {
-              var num = 0;
-              for (var i = 0; i < obj.options.length; i++) {
-                  if (obj.options[i].selected == true) {
-                      num++;
-                  }
-              }
-              if (num == 1) {
-                  var url = obj.options[obj.selectedIndex].value;
-                  window.open(url); //这里修改打开连接方式
-              }
-          }
-      </script>
+  
 
 </head>
 <body>
   <div class="panel-body">";
  <div class="table-responsive">";
 
-   <select class="form-control" onchange="s_click(this)">
+   <select class="form-control" onchange="self.location.href=options[selectedIndex].value">
        <option value="119.29.178.222/cube/eventshow333-1">三阶初赛</option>
        <option value="119.29.178.222/cube/eventshow333-2">三阶复赛</option>
        <option value="119.29.178.222/cube/eventshow333-3">三阶决赛</option>
