@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+
 
 </head>
 <body>
@@ -15,14 +15,14 @@
  <div class="table-responsive">";
 
    <select class="form-control" onchange="self.location.href=options[selectedIndex].value">
-       <option value="119.29.178.222/cube/eventshow333-1">三阶初赛</option>
-       <option value="119.29.178.222/cube/eventshow333-2">三阶复赛</option>
-       <option value="119.29.178.222/cube/eventshow333-3">三阶决赛</option>
-       <option value="119.29.178.222/cube/eventshow222">二阶</option>
-       <option value="119.29.178.222/cube/eventshow333oh">三阶单手</option>
-       <option value="119.29.178.222/cube/eventshow444">四阶</option>
-       <option value="119.29.178.222/cube/eventshow555">五阶</option>
-       <option value="119.29.178.222/cube/eventshowfunny">趣味项目</option>
+       <option value="119.29.178.222/cube/eventshow333-1.php">三阶初赛</option>
+       <option value="119.29.178.222/cube/eventshow333-2.php">三阶复赛</option>
+       <option value="119.29.178.222/cube/eventshow333-3.php">三阶决赛</option>
+       <option value="119.29.178.222/cube/eventshow222.php">二阶</option>
+       <option value="119.29.178.222/cube/eventshow333oh.php">三阶单手</option>
+       <option value="119.29.178.222/cube/eventshow444.php">四阶</option>
+       <option value="119.29.178.222/cube/eventshow555.php">五阶</option>
+       <option value="119.29.178.222/cube/eventshowfunny.php">趣味项目</option>
 
    </select>
   <table class="table table-hover"><tr><th>项目</th><th>姓名</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>avg</th><th>pb</th></tr>";
