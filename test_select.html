@@ -1,12 +1,11 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <title>select加链接</title>
 </head>
 <body>
 <SCRIPT language=javascript>
-<!--
-// open the related site windows
+
 function mbar(sobj) {
 var docurl =sobj.options[sobj.selectedIndex].value;
 if (docurl != "") {
@@ -15,7 +14,7 @@ sobj.selectedIndex=0;
 sobj.blur();
 }
 }
-//-->
+
 </SCRIPT>
 <Select onchange=mbar(this) name="select">
 <OPTION selected>=== 合作伙伴 ===</OPTION>
@@ -24,4 +23,4 @@ sobj.blur();
 <OPTION value="http://www.flash8.net/">闪吧</OPTION>
 </Select>
 </body>
-</html> 
+</html>
