@@ -44,7 +44,7 @@ $conn->query("set character set 'utf8'");//读库
 $conn->query("set names 'utf8'");//写库
 
 
-$sql = "SELECT * FROM result where item_list_id=1 ";
+$sql = "SELECT * FROM result where item_list_id=1 ORDER BY avg ";
 $result = $conn->query($sql);
 $avg=0;
 $pb=0;
