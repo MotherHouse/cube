@@ -7,22 +7,36 @@
   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <script type="text/javascript">
+          //select跳页
+          function s_click(obj) {
+              var num = 0;
+              for (var i = 0; i < obj.options.length; i++) {
+                  if (obj.options[i].selected == true) {
+                      num++;
+                  }
+              }
+              if (num == 1) {
+                  var url = obj.options[obj.selectedIndex].value;
+                  window.open(url); //这里修改打开连接方式
+              }
+          }
+      </script>
 
 </head>
 <body>
   <div class="panel-body">";
  <div class="table-responsive">";
 
-   <select class="form-control">
-       <option>三阶初赛</option>
-       <option>三阶复赛</option>
-       <option>三阶决赛</option>
-       <option>二阶</option>
-       <option>三阶单手</option>
-       <option>四阶</option>
-       <option>五阶</option>
-       <option>趣味项目</option>
+   <select class="form-control" onchange="s_click(this)">
+       <option value="119.29.178.222/cube/eventshow333-1">三阶初赛</option>
+       <option value="119.29.178.222/cube/eventshow333-2">三阶复赛</option>
+       <option value="119.29.178.222/cube/eventshow333-3">三阶决赛</option>
+       <option value="119.29.178.222/cube/eventshow222">二阶</option>
+       <option value="119.29.178.222/cube/eventshow333oh">三阶单手</option>
+       <option value="119.29.178.222/cube/eventshow444">四阶</option>
+       <option value="119.29.178.222/cube/eventshow555">五阶</option>
+       <option value="119.29.178.222/cube/eventshowfunny">趣味项目</option>
 
    </select>
   <table class="table table-hover"><tr><th>项目</th><th>姓名</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>avg</th><th>pb</th></tr>";
