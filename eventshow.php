@@ -13,6 +13,18 @@
 <body>
   <div class="panel-body">";
  <div class="table-responsive">";
+
+   <select class="form-control">
+       <option>三阶初赛</option>
+       <option>三阶复赛</option>
+       <option>三阶决赛</option>
+       <option>二阶</option>
+       <option>三阶单手</option>
+       <option>四阶</option>
+       <option>五阶</option>
+       <option>趣味项目</option>
+
+   </select>
   <table class="table table-hover"><tr><th>项目</th><th>姓名</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>avg</th><th>pb</th></tr>";
 
 <?php
