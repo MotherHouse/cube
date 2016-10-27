@@ -29,7 +29,7 @@
        <option value="eventshowfunny.php">趣味项目</option>
 
    </select>
-  <table class="table table-hover"><tr><th>项目</th><th>姓名</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>avg</th><th>pb</th></tr>
+  <table class="table table-hover"><tr><th>五阶</th><th>姓名</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>avg</th><th>pb</th></tr>
 
 <?php
 $servername = "119.29.178.222";
