@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);
+
 $idresult = $_POST['idresult'];
 $item_list_id = $_POST['item_list_id'];
 $item_step = $_POST['item_step'];

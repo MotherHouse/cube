@@ -211,7 +211,8 @@ if ($conn->connect_error) {
 
      die("Connection failed: " . $conn->connect_error);
 }
-else {header("Location:allresult.php");
+else {
+     header("Location:allresult.php");
 }
 
 
