@@ -25,6 +25,7 @@ if ($conn->connect_error) {
 }
 else {
   header("Location:alluser.php");
+
 }
 
 

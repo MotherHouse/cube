@@ -30,7 +30,7 @@ require_once 'function.php'
 
 
 <?php
-
+error_reporting(0);
 $conn = connectDb();
 $conn->query("set character set 'utf8'");//读库
 $conn->query("set names 'utf8'");//写库

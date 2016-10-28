@@ -15,6 +15,7 @@ require_once 'function.php'
 <body>
 
 <?php
+error_reporting(0);
 
 // echo $_GET['idresult'];
 //
@@ -57,7 +58,7 @@ if (!empty($_GET['idresult']))
                            <div hidden="hidden"div class="form-group">idresult:
                          <input type = "text" name="idresult" value="<?php echo $row['idresult']; ?>">
                          </div>
-                       
+
                        <div class="form-group">项目：
                          <br>
                          <input class="form-control" name="item_list_id" value="<?php echo $row['item_list_id']; ?>">

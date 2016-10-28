@@ -52,126 +52,127 @@ if(empty($result5))
 {
   die('result5 is empty');
 }
-if (strtoupper($row["result1"])!="DNF")
+
+if (strtoupper($result1)!="DNF")
 {
-  $pb=$row["result1"];
+  $pb=$result1;
 }
 
-if (strtoupper($row["result2"])!="DNF")
+if (strtoupper($result2)!="DNF")
 {
- if ($row["result2"]<$pb  )
+ if ($result2<$pb  )
  {
-   $pb=$row["result2"];
+   $pb=$result2;
  }
 
  if ($pb==0) {
-   $pb=$row["result2"];
+   $pb=$result2;
  }
 
 }
 
-if (strtoupper($row["result3"])!="DNF")
+if (strtoupper($result3)!="DNF")
 {
-if ($row["result3"]<$pb or $pb==0 )
+if ($result3<$pb or $pb==0 )
  {
-   $pb=$row["result3"];
+   $pb=$result3;
  }
 
 }
 
-if (strtoupper($row["result4"])!="DNF")
+if (strtoupper($result4)!="DNF")
 {
- if ($row["result4"]<$pb or $pb==0)
+ if ($result4<$pb or $pb==0)
  {
-   $pb=$row["result4"];
+   $pb=$result4;
  }
 
 }
-if (strtoupper($row["result5"])!="DNF")
+if (strtoupper($result5)!="DNF")
 {
- if ($row["result5"]<$pb or $pb==0)
+ if ($result5<$pb or $pb==0)
  {
-   $pb=$row["result5"];
+   $pb=$result5;
  }
 
 }
 
-if (strtoupper($row["result1"])!="DNF")
+if (strtoupper($result1)!="DNF")
 {
-  $worst=$row["result1"];
+  $worst=$result1;
 
 }
- if (strtoupper($row["result2"])!="DNF")
+ if (strtoupper($result2)!="DNF")
 {
-  if ($row["result2"]>$worst)
+  if ($result2>$worst)
   {
-    $worst=$row["result2"];
+    $worst=$result2;
   }
 
 }
- if (strtoupper($row["result3"])!="DNF")
+ if (strtoupper($result3)!="DNF")
 {
-  if ($row["result3"]>$worst)
+  if ($result3>$worst)
   {
-    $worst=$row["result3"];
+    $worst=$result3;
   }
 }
- if (strtoupper($row["result4"])!="DNF")
+ if (strtoupper($result4)!="DNF")
 {
-  if ($row["result4"]>$worst)
+  if ($result4>$worst)
   {
-    $worst=$row["result4"];
+    $worst=$result4;
   }
 }
- if (strtoupper($row["result5"])!="DNF")
+ if (strtoupper($result5)!="DNF")
 {
-  if ($row["result5"]>$worst)
+  if ($result5>$worst)
   {
-    $worst=$row["result5"];
+    $worst=$result5;
   }
 }
 
-if (strtoupper($row["result1"])=="DNF")
+if (strtoupper($result1)=="DNF")
 {
   $dnf_times=$dnf_times+1;
 }
-else if (strtoupper($row["result2"])=="DNF")
+else if (strtoupper($result2)=="DNF")
 {
     $dnf_times=$dnf_times+1;
 }
-else if (strtoupper($row["result3"])=="DNF")
+else if (strtoupper($result3)=="DNF")
 {
     $dnf_times=$dnf_times+1;
 }
-else if (strtoupper($row["result4"])=="DNF")
+else if (strtoupper($result4)=="DNF")
 {
     $dnf_times=$dnf_times+1;
 }
-else if (strtoupper($row["result5"])=="DNF")
+else if (strtoupper($result5)=="DNF")
 {
     $dnf_times=$dnf_times+1;
 }
 
 
-if (strtoupper($row["result1"])!="DNF")
+if (strtoupper($result1)!="DNF")
  {
-   $sum=$sum+$row[result1];
+   $sum=$sum+$result1;
  }
-if (strtoupper($row["result2"])!="DNF")
+if (strtoupper($result2)!="DNF")
   {
-    $sum=$sum+$row[result2];
+    $sum=$sum+$result2;
   }
-if (strtoupper($row["result3"])!="DNF")
+if (strtoupper($result3)!="DNF")
    {
-     $sum=$sum+$row[result3];
+     $sum=$sum+$result3;
    }
-if (strtoupper($row["result4"])!="DNF")
+if (strtoupper($result4)!="DNF")
     {
-      $sum=$sum+$row[result4];
+      $sum=$sum+$result4;
     }
-if (strtoupper($row["result5"])!="DNF")
+if (strtoupper($result5)!="DNF")
      {
-       $sum=$sum+$row[result5];
+       $sum=$sum+$result5;
      }
 
      if ($dnf_times>=2)
@@ -200,20 +201,17 @@ if (strtoupper($row["result5"])!="DNF")
 require_once 'function.php';
 $conn=connectDb();
 
-$sql = "insert into result(item_list_id,item_step,player_name,result1,result2,result3,result4,result5,best,avg) values ('$item_list_id','$item_step','$player_name','$result1','$result2','$result3','$result4','$result5','$pb','$avg')";
-
-
+$sql = "insert into result(event_id,item_list_id,item_step,player_name,result1,result2,result3,result4,result5,best,avg) values (1,'$item_list_id','$item_step','$player_name','$result1','$result2','$result3','$result4','$result5','$pb','$avg')";
 
 $conn->query($sql);
 
 
 if ($conn->connect_error) {
+  // echo "$conn->connect_error";
 
      die("Connection failed: " . $conn->connect_error);
-
 }
-else {
-   header("Location:allresult.php");
+else {header("Location:allresult.php");
 }
 
 

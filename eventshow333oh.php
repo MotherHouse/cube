@@ -29,9 +29,10 @@
        <option value="eventshowfunny.php">趣味项目</option>
 
    </select>
-  <table class="table table-hover"><tr><th>三阶单手</th><th>姓名</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>avg</th><th>pb</th></tr>
+  <table class="table table-hover"><tr><th>三阶单手</th><th>名次</th><th>姓名</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>avg</th><th>pb</th></tr>
 
 <?php
+error_reporting(0);
 $servername = "119.29.178.222";
 $username = "root";
 $password = "zheng1206";
@@ -60,10 +61,10 @@ $sum=0;
 
 
 if ($result->num_rows> 0) {
-
-     while($row = $result->fetch_assoc()) {
-
-         echo "<tr><td></td><td>" . $row["player_name"]. "</td><td> " . $row["result1"]. "</td><td> " . $row["result2"]. "</td><td> " . $row["result3"]. "</td><td> " . $row["result4"]. "</td><td> ". $row["result5"]. "</td>";
+  $i=0;
+  while($row = $result->fetch_assoc()) {
+      $i=$i+1;
+      echo "<tr><td></td><td>".$i."</td><td>" . $row["player_name"]. "</td><td> " . $row["result1"]. "</td><td> " . $row["result2"]. "</td><td> " . $row["result3"]. "</td><td> " . $row["result4"]. "</td><td> ". $row["result5"]. "</td>";
             $dnf_times=0;
             $worst=0;
             $pb=0;
