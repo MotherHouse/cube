@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 
 $item_list_id = $_POST['item_list_id'];
 $item_step = $_POST['item_step'];
