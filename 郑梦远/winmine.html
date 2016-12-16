@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>收缩与展开</title>
+<style>
+<!--
+body{
+	background-color:#FFF;
+}
+#navigation {
+	width:200px;
+	font-family:Arial; margin:0 auto;
+}
+#navigation > ul {
+	list-style-type:none;				
+	margin:0px;
+	padding:0px;
+}
+#navigation > ul > li {
+	border-bottom:1px solid #099;	
+}
+#navigation > ul > li > a{
+	display:block;						
+	padding:5px 5px 5px 0.5em;
+	text-decoration:none;
+	border-left:12px solid #099;		
+	border-right:1px solid #099 ;		
+}
+#navigation > ul > li > a:link, #navigation > ul > li > a:visited{  /*鼠标经过变色*/
+	background-color:#0CC;
+	color:#FFFFFF;
+}
+#navigation > ul > li > a:hover{		
+	background-color:#0C9;			
+	color:#ffff00;						
+}
+
+/* 子菜单的CSS样式 */
+#navigation ul li ul{
+	list-style-type:none;
+	margin:0px;
+	padding:0px 0px 0px 0px;
+}
+#navigation ul li ul li{
+	border-top:1px solid #099;
+}
+#navigation ul li ul li a{
+	display:block;
+	padding:3px 3px 3px 0.5em;
+	text-decoration:none;
+	border-left:12px solid #0CC;
+	border-right:1px solid #0CC;
+}
+-->
+</style>
+<script language="javascript" src="jquery.js"></script>
+<script language="javascript">
+$(function(){
+			 $("#navigation ul>li:eq(1)").click(function(){
+			   $("#navigation ul li ul li:lt(2)").siblings().toggle();
+			     }).click()
+			  
+			 $("#navigation ul>li:eq(4)").click(function(){
+			   $("#navigation ul li ul li:gt(2)").sibling().toggle();
+			     }).click()
+					 })
+</script>
+</head>
+<body>
+<div id="navigation">
+	<ul id="listUL">
+		<li><a href="#">Home</a></li>
+		     
+		<li><a href="#">News</a>
+        	<ul>
+            	<li><a href="#">Lastest News</a></li>
+                <li><a href="#">All News</a></li>
+            </ul>
+        </li>
+		<li><a href="#">Sports</a>
+        	<ul>
+            	<li><a href="#">Basketball</a></li>
+                <li><a href="#">Football</a></li>
+                <li><a href="#">Volleyball</a></li>
+            </ul>        
+        </li>
+		
+		<li><a href="#">Contact Me</a></li>
+	</ul>
+</div>
+</body>
+</html>
